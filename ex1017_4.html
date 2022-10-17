@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문연습</title>
+</head>
+<body>
+    <h1>반복문 연습문제</h1>
+    <h2>비밀번호 알아내기</h2>
+    <script>
+        let passwd="";
+        let count=1;
+        do{
+            passwd=prompt("비밀번호 4자리를 입력하시오.",1111)
+            if(passwd=="1234"){
+            document.write("열림");
+            break;
+            }
+            count+=1;
+        }while(count<=5);
+        document.write("5번시도가 끝났습니다.");
+    </script>
+</body>
+</html>

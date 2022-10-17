@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수의범위</title>
+</head>
+<body>
+    <h1>전역변수와 지역변수</h1>
+    <script>
+        var x;
+        function f(){
+            let y;
+            var x;
+            this.x=10;
+            y=20;
+            document.write(y);
+            document.write(x);
+        }
+        f()
+        document.write(x);
+        const MAX=10;
+        document.write("<br>"+MAX);
+        MAX=20;
+        document.write("<br>"+MAX);
+    </script>
+    <p onmouseover="document.body.style.color='blue' ">테크에 색상 적용</p>
+</body>
+</html>

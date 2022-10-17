@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompt연습</title>
+</head>
+<body>
+    <h1>prompt함수 사용해보기</h1>
+    <h3>prompt함수를 사용하여 1부터 100 사이의 숫자를 입력받아
+         그 정수 값이 90보다 크면 "A", 그렇지 않고 80보다 크고 90보다 작으면"B",나머지는"F"출력하는 프로그램작성</h3>
+    <script>
+        let  num= prompt("숫자를 입력하세요",0)
+        r_num=parseInt(num)
+         if(r_num>90 && r_num<=100){
+            document.write("A")
+        }
+        else if(r_num>=80 && r_num<90){
+            document.write("B")
+        }  
+        else if(r_num>100){
+            document.write("잘못입력하셧습니다.")
+        }
+         else{
+             document.write("F")
+         }  
+    </script>
+</body>
+</html>
