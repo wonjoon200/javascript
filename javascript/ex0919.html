@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수복습</title>
+    <script>
+        function nameWrite(name){
+            document.write(name);
+            document.write(name);
+            document.writeln(name);
+            document.writeln(name);
+        }
+    </script>
+</head>
+<body>
+    <h1>함수 정의하여 사용해보기</h1>
+    <script>
+        nameWrite("홍순이");
+        document.write("<h3>write함수 연습</h3>");
+        //prompt 함수의 사용
+        document.write("2+5 는 <br>");
+        document.write("7입니다 <br>");
+        let ret= prompt("이름을 입력하세요","홍길동");
+        let ret2=confirm("확실합니까?");
+        if (ret2==true){
+            document.write(ret)
+        }
+        else{
+            document.write("출력하지 않습니다.");
+        }
+    </script>
+</body>
+</html>

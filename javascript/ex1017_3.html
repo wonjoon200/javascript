@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문</title>
+</head>
+<body>
+    <h1>반복문 연습</h1>
+    <h2>for문</h2>
+    <script>
+        for(let size=5; size<=50; size+=5){
+        document.write("<span ");
+        document.write(" style='font-size:"+size+"px'>");
+        document.write(size+ "px") 
+        document.write("for문 연습</span> <br>");
+    }
+
+    </script>
+    <h2>while문 연습</h2>
+    <script>
+        let num1=prompt("정수를 입력하시오",0);
+        num1=parseInt(num1);
+        let i=1; let sum=0; 
+        while(i<=num1){
+            sum+=i;
+            i++;
+        }
+        document.write("1부터 " + num1 +"까지의 합은" + sum + "입니다.<br><br>")
+    </script>
+
+    <h2>do-while문 연습</h2>
+    <script>
+        do{
+        let j=1; let sum2=0;        
+            sum +=j;
+            j++;
+        }while(j<=num1);
+        document.write("1부터 " + num1 +"까지의 합은" + sum2 + "입니다.<br><br>")
+
+    </script>
+</body>
+</html>

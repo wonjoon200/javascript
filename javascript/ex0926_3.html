@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if문테스트</title>
+</head>
+<body>
+    <h1>if문 문제 테스트</h1>
+    <h5>월,화,수,목,금,토,일중 하나를 입력받아
+        월~금이면 출석,토일이면 휴일이 출력되도록하고
+        다른 것이 입력되면 잘못입력이라고 출력
+    </h5>
+    <script>
+        let str=prompt("요일을 입력하세요","월")
+        if(str=="월" || str=="화" || str=="수" || str=="목" || str=="금"){
+            document.write("출석");
+        }else if(str=="토" || str=="일"){
+            document.write("휴일");
+        }else{
+            document.write("잘못입력하였습니다");
+        }
+    </script>
+</body>
+</html>
