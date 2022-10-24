@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+</head>
+<body>
+    <h1>배열 만들고 사용하기</h1>
+    <h2>배열 만들기</h2>
+    <script>
+        let cities=["서울","런던","도쿄"]
+        cities[3]="워싱턴"
+        cities[1]="파리"
+        let n=cities.length
+        document.write(n+"<br>")
+        for(let i=0; i<=n-1;i++){
+        document.write(cities[i]+"<br>")
+    }
+
+    let score=new Array(5);
+    for(let i=0; i<5;i++){
+        score[i]=prompt("숫자입력")
+    }
+    for(let i=0; i<score.length;i++){
+    document.write(score[i]+"<br>")
+    }
+    </script>
+</body>
+</html>
