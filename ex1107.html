@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열복습</title>
+</head>
+<body>
+    <h1>평균구하기</h1>
+    <h3>5개의 값을 입력받아 평균을 구하고 출력하기</h3>
+    <hr>
+    <script>
+        let score=new Array();
+        for(let i=0; i<5; i++){
+        let imsiScore=prompt("점수입력")
+        score[i]=parseInt(imsiScore);
+        }
+        for(let i=0; i<score.length; i++){
+        document.write(+ score[i] +"<br>")
+        }
+        document.write("<br> <hr>")
+        let sum=0;
+        for(let i=0; i<score.length; i++){
+        sum=sum+score[i];
+        }
+        document.write("합계 :" +sum + "<br>");
+        let avg;
+        avg=sum/score.length
+        document.write("평균 :" +avg + "<br>");
+    </script>
+</body>
+</html>

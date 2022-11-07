@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <h3>String객체</h3>
+    <script>
+        let hello=new String("안녕하세요");
+        for(let i=0; i<hello.length;i++){
+            document.write(hello[i]+"<br>");
+        }
+        let a=new String("Boys and Girl");
+        let b=new String("!!");
+        document.write(a+"<br>");
+        document.write(b+"<br>");
+        document.write(a.charAt(3)+ "<br>");
+        document.write(a.concat(b," 입니다.")+"<br>");
+        document.write(a.indexOf("s")+"<br>");
+        document.write(a.indexOf("and")+"<br>")
+        document.write(a.slice(5, 8) + "<br>"); /* 값의 공간을 자르는 출력  */
+        document.write(a.substr(5, 3) + "<br>"); 
+        document.write(a.toUpperCase() + "<br>");
+        document.write(a.replace("and", "or") + "<br>");
+        document.write("   kitae   ".trim() + "<br><hr>"); /* 공백을 없애서 출력     */
+        
+        let c=new String("B12,o,y")
+        document.write(c);
+        let sub=c.split(",");
+        document.write("<br>"+sub[0]);
+    </script>
+</body>
+</html>
