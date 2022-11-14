@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도서 객체</title>
+    <script>
+        function Books(title,author,publisher,price){
+        this.title=title;
+        this.author=author;
+        this.publisher=publisher;
+        this.price=price;
+        
+        
+        this.lentNum=function(name){
+            document.write(name+"님이 "+ this.title + "을 대여했습니다.");
+        }
+    }
+        </script>
+</head>
+<body>
+    <h1>도서명 만들고 대여해보기</h1>
+    <hr>
+    <script>
+        let Books1=new Books("홍길동전","허균","비전사","5000");
+        Books1.lentNum("홍길동");
+    </script>
+</body>
+</html>

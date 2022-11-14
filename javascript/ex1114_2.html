@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계좌객체</title>
+    <script>
+        function account(owner,code,balance){
+            this.owner=owner;
+            this.code=code;
+            this.balance=balance;
+            this.deposit=function deposit(money){
+                this.balance=this.balance+money;
+            } 	
+            this.withdraw=function withdraw(money){
+                this.balance=this.balance-money;
+            }
+
+            this.inquery=function inquery(){
+                return this.balance;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>은행계좌 객체 만들기</h1>
+    <script>
+        let account1=new account("홍길동",11111,2000);
+        document.write(account1.owner);
+        document.write(account1.balance);
+        account1.deposit(1000);
+        document.write(account1.balance);
+        let account2=new account("김말자",2222,1000);
+    </script>
+
+</body>
+</html>
