@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS 스타일 동적 변경</title>
+<script>
+function change(obj) {
+	let span = document.getElementById("mySpan"); 
+	obj.style.color = "green"; 
+	obj.style.fontSize = "30px"; 
+	obj.style.display = "block"; 
+	obj.style.width = "6em"; 
+	obj.style.border = "3px dotted magenta"; 
+	obj.style.margin = "20px"; 
+}
+
+</script>
+</head>
+<body>
+<h3>CSS 스타일 동적 변경</h3>
+<hr>
+<p style="color:blue" >이것은 
+    <span id="mySpan" style="color:red" onclick="change(this)">문장입니다.</span>
+
+    <span id="mySpan1" style="color:red" onclick="change(this)">2번째</span>
+</p>
+</body>
+</html>
