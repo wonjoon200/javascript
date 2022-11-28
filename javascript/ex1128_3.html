@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>태그 삽입</title>
+    <script>
+        function ramenOrder(parent){
+            let order=prompt("라면끓이는 순서");
+            let newli=document.createElement("li");
+            newli.innerHTML=order;
+            parent.appendChild(newli);
+        }
+    </script>
+</head>
+<body>
+    <h3>라면을 끓이는 방법</h3>
+    <hr>
+    <ol type="A" style="background-color: yellowgreen;" onclick="ramenOrder(this)">
+        <li>물을 끓인다.</li>
+    </ol>
+</body>
+</html>
