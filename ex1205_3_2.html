@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트디폴트행동취소</title>
+    <script>
+        function query(){
+            let ret=confirm("정말로 이동하시겠습니까?");
+            return ret;
+        }
+    </script>
+</head>
+<body>
+    <h3>이벤트의 디폴트 행동 취소</h3>
+    <hr>
+    <a href="http://www.naver.com" onclick="return query()">네이버</a>
+    <hr>
+    <form action="">
+        <input type="checkbox">빵<br>
+        <input type="checkbox" onclick="event.preventDefault()">술(체크 안됨)
+</body>
+</html>
