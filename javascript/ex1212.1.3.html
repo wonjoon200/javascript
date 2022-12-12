@@ -1,43 +1,29 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8">
-<title>마우스 관련 리스너</title>
+<html>
+<head>
+<meta charset="utf-8"><title>문서의 동적 구성</title>
 <script>
-let width=1;
-function down(obj) {
-	obj.style.fontStyle = "italic";
+function createDIV() {
+	let obj = document.getElementById("parent");
+	let newDIV = document.createElement("div");
+	newDIV.innerHTML = "새로 생성된 DIV입니다.";
+	newDIV.setAttribute("id", "myDiv");
+	newDIV.style.backgroundColor = "skyblue";
+	newDIV.onclick = function() {
+		let p = this.parentElement;
+		p.removeChild(this); 
+	};	
+	obj.appendChild(newDIV);
 }
-function up(obj) {
-	obj.style.fontStyle = "normal";
-}
-function over(obj) {
-	obj.style.borderColor = "violet";
-}
-function out(obj) {
-	obj.style.borderColor = "lightgray";
-}
-function wheel(e, obj) {
-	if(e.wheelDelta < 0) {
-		width--;
-		if(width < 0) width = 0;
-	}
-	else
-		width++;
-	obj.style.borderStyle = "ridge";
-	obj.style.borderWidth = width+"px";
-}
-</script></head>
-<body >
-    <h3>마우스 관련 이벤트 리스너</h3>
-    <hr>
-    <div>마우스 관련 
-        <span onmousedown="down(this)"
-                onmouseup="up(this)"
-                onmouseover="over(this)"
-                onmouseout="out(this)"
-                onwheel="wheel(event, this)"
-                style="display:inline-block">이벤트
-        </span>가 발생합니다.
-    </div>
-    </body>
-    </html>
-    
+</script>
+</head>
+<body id="parent">
+<h3>DIV 객체를 동적으로 생성, 삽입, 삭제하는 예제</h3>
+<hr>
+<p>DOM 트리에 동적으로 객체를 삽입할 수 있습니다.
+createElement(), appendChild(), 
+removeChild() 메소드를 이용하여 새로운 객체를 생성,
+삽입, 삭제하는 예제입니다.</p>
+<a href="javascript:createDIV()">DIV 생성</a><p>
+<p>
+</body></html>
