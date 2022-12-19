@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수만들기</title>
+</head>
+<body>
+    <h3>비만도 측정 함수 만들기</h3>
+    <hr>
+    <script LANGUAGE="JAVASCRIPT">
+        <!-- hide this script tag's contents from old browsers
+        function ClearForm(form){
+        
+        form.weight.value = "";
+        form.height.value = "";
+        form.bmi.value = "";
+        form.my_comment.value = "";
+        }
+        function bmi(weight, height) {
+        
+        bmindx=weight/eval(height*height);
+        return bmindx;
+        }
+        function checkform(form) {
+        
+        if (form.weight.value==null||form.weight.value.length==0
+        || form.height.value==null||form.height.value.length==0){
+        alert("\n 체중과 키를 입력해 주세요");
+        return false;
+        }
+        
+        else if (parseFloat(form.height.value) <= 0||
+        parseFloat(form.height.value) >=500||
+        parseFloat(form.weight.value) <= 0||
+        parseFloat(form.weight.value) >=500){
+        alert("\n입력 수치가 틀렸어요 \n다시 입력해 주세요 \n체중은 Kg 으로 \n키는 cm 로 ");
+        ClearForm(form);
+        return false;
+        }
+        
+        return true;
+        
+        }
+        function computeform(form) {
+        
+        if (checkform(form)) {
+        
+        yourbmi=Math.round(bmi(form.weight.value, form.height.value/100));
+        form.bmi.value=yourbmi;
+        
+        if (yourbmi >25) {
+        form.my_comment.value="과체중이네요.";
+        }
+        else if (yourbmi >=22 && yourbmi <=25) {
+        form.my_comment.value="정상입니다.";
+        }
+        else if (yourbmi  && yourbmi <22) {
+        form.my_comment.value="제체중입니다.";
+        }
+        
+        }
+        return;
+        }
+        </script>
+        <body>  
+        당신의 체중(kg)과 키(cm)를 입력해주세요.
+        
+        
+        <FORM NAME="BMI" method=POST>
+        
+            키 (cm)
+            <INPUT TYPE=TEXT NAME=height SIZE=10 onFocus="this.form.height.value=''">
+        체중 (kg)
+        <INPUT TYPE=TEXT NAME=weight SIZE=10 onFocus="this.form.weight.value=''">
+        
+        BMI
+        <INPUT TYPE=TEXT NAME=bmi SIZE=10 >
+        결과
+        <INPUT TYPE=TEXT NAME=my_comment SIZE=25 >
+        
+        <INPUT TYPE="button" VALUE="결과 보기" onClick="computeform(this.form)">
+        <INPUT TYPE="reset" VALUE="다시 검사해보기" onClick="ClearForm(this.form)">
+        </FORM>
+</body>
+</html>
